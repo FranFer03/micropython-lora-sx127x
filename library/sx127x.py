@@ -7,8 +7,6 @@ import time
 from machine import SPI, Pin #ignore # noqa: F401
 
 class LoRa:
-    """LoRa radio driver for SX127x chips"""
-    
     def __init__(self, spi, cs_pin, reset_pin, dio0_pin):
         """Initialize LoRa module with SPI interface and control pins.
         
