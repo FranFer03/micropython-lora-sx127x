@@ -14,19 +14,26 @@ from machine import SPI, Pin
 import time
 import sys
 
-sys.path.append('../library')
+sys.path.append('./library')
 from sx127x import LoRa
 
-spi = SPI(1, 
-          baudrate=10000000, 
-          polarity=0, 
-          phase=0,
-          sck=Pin(18),
-          mosi=Pin(23),
-          miso=Pin(19))
 
-print("Initializing LoRa...")
-lora = LoRa(spi, cs_pin=5, reset_pin=14, dio0_pin=26)
+# Pines para comunicación SPI con módulo LoRa
+SPI_SCK_PIN = 5     # Pin de reloj SPI (Serial Clock)
+SPI_MOSI_PIN = 27   # Pin de datos Master Out Slave In
+SPI_MISO_PIN = 19   # Pin de datos Master In Slave Out
+
+# Pines específicos del módulo LoRa
+LORA_CS_PIN = 18    # Pin Chip Select (CS/NSS)
+LORA_RST_PIN = 14   # Pin de Reset del módulo
+LORA_DIO0_PIN = 26  # Pin de interrupción DIO0
+
+spi = SPI(2,baudrate=3000000, polarity=0, phase=0, sck=Pin(18), mosi=Pin(23), miso=Pin(19))
+lora = LoRa(spi, cs_pin=Pin(5), reset_pin=Pin(4), dio0_pin=Pin(2))
+
+# spi = SoftSPI(baudrate=3000000, polarity=0, phase=0, 
+#              sck=Pin(SPI_SCK_PIN), mosi=Pin(SPI_MOSI_PIN), miso=Pin(SPI_MISO_PIN))
+# lora = LoRa(spi, cs_pin=Pin(LORA_CS_PIN), reset_pin=Pin(LORA_RST_PIN), dio0_pin=Pin(LORA_DIO0_PIN))
 
 # Optional: Configure custom parameters
 # lora.set_frequency(915E6)      # 915 MHz (Americas) - default
