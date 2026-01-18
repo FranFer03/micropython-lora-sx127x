@@ -19,14 +19,14 @@ from sx127x import LoRa
 
 
 # Pines para comunicación SPI con módulo LoRa
-SPI_SCK_PIN = 9     # Pin de reloj SPI (Serial Clock)
-SPI_MOSI_PIN = 10   # Pin de datos Master Out Slave In
-SPI_MISO_PIN = 11   # Pin de datos Master In Slave Out
+SPI_SCK_PIN = 5     # Pin de reloj SPI (Serial Clock)
+SPI_MOSI_PIN = 27   # Pin de datos Master Out Slave In
+SPI_MISO_PIN = 19   # Pin de datos Master In Slave Out
 
 # Pines específicos del módulo LoRa
-LORA_CS_PIN = 8    # Pin Chip Select (CS/NSS)
-LORA_RST_PIN = 12   # Pin de Reset del módulo
-LORA_DIO0_PIN = 14  # Pin de interrupción DIO0
+LORA_CS_PIN = 18    # Pin Chip Select (CS/NSS)
+LORA_RST_PIN = 14   # Pin de Reset del módulo
+LORA_DIO0_PIN = 26  # Pin de interrupción DIO0
 
 
 spi = SoftSPI(baudrate=3000000, polarity=0, phase=0, 
