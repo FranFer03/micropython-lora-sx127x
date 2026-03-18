@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(wc -l c:/Github/micropython-lora-sx127x/ensayos/*.txt)"
+    ]
+  }
+}
