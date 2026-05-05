@@ -1,6 +1,0 @@
-{"rssi": -107, "fecha": "2026-03-05 18:45:38", "mensaje_recibido": "Envio #936"}
-{"rssi": -103, "fecha": "2026-03-05 18:45:41", "mensaje_recibido": "Envio #937"}
-{"rssi": -108, "fecha": "2026-03-05 18:45:45", "mensaje_recibido": "Envio #939"}
-{"rssi": -101, "fecha": "2026-03-05 18:45:51", "mensaje_recibido": "Envio #942"}
-{"rssi": -105, "fecha": "2026-03-05 18:45:55", "mensaje_recibido": "Envio #944"}
-{"rssi": -105, "fecha": "2026-03-05 18:45:57", "mensaje_recibido": "Envio #945"}

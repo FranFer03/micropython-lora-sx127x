@@ -1,2 +1,0 @@
-{"rssi": -91, "fecha": "2026-03-05 18:57:59", "mensaje_recibido": "Envio #1293"}
-{"rssi": -85, "fecha": "2026-03-05 18:58:01", "mensaje_recibido": "Envio #1294"}
